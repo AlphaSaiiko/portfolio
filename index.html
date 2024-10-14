@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>Portfolio</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Antoine Lechales</h1>
+			<ul>
+				<li><a href="#home">Accueil</a></li>
+				<li><a href="#about-me">Présentation</a></li>
+				<li><a href="#projet">Projet</a></li>
+				<li><a href="#skill">Compétences</a></li>
+				<li><a href="#certification">Certification</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="home" class="fade-in" >
+		<div class="home-content">
+			<h2>Bonjours, Je suis Antoine Lechasles</h2>
+			<p>Front End Develloper | Eleve de L'IUT du Havre</p>
+		</div>
+		<img src="/images/Capture d'écran 2024-09-23 230555.png" alt="Photo de profil">
+	</section>
+
+	<section id="about-me" class="fade-in">
+		<div class="about-me-content">
+			<h2>A propos de moi</h2>
+			<p>Je m'appelle Antoine Lechasles, j'ai 19 ans et je suis actuellement en deuxième année de BUT Informatique à l'IUT du
+			Havre. Passionné par le développement web, mon objectif professionnel est de devenir développeur front-end. Ce domaine
+			me fascine par son mélange subtil entre créativité et technique, permettant de transformer des concepts abstraits en
+			interfaces interactives.</p>
+
+			<p>Ce qui me distingue, c'est mon esprit compétitif et ma détermination à toujours repousser mes limites. J'aime relever de
+			nouveaux défis et constamment de nouvelles compétences. Je suis animé par la volonté d'apprendre et de m'améliorer en
+			permanence, ce qui me pousse à rechercher des solutions innovantes aux problèmes complexes. Je crois fermement que le
+			développement web est un domaine en perpétuelle évolution, et il est essentiel de rester à jour avec les nouvelles.</p>
+
+			<p>En plus de mes compétences techniques, je valorise l'esprit d'équipe et la collaboration. J'ai acquis une bonne capacité
+			d'adaptation à divers environnements de travail grâce à mes expériences de projets collaboratifs et à mon implication
+			dans des événements en ligne, tels que l'organisation de serveurs Minecraft. Ces expériences m'ont permis de développer
+			des compétences en gestion de projet et en communication.</p>
+
+			<p>Je suis également curieux d'en apprendre davantage sur le monde de l'entreprise et de découvrir comment mes compétences
+			peuvent contribuer à la réussite d'une équipe. Mon parcours académique, combiné à mes projets personnels, m'a permis de
+			développer un sens aigu de l'organisation.</p>
+		</div>
+	</section>
+
+<section id="projet" class="fade-in">
+	<div class="titre">
+		<h2>Projet</h2>
+		<p>Voici quelques-uns de mes projets :</p>
+	</div>
+	<div class="projet-content">
+		<div class="projet-box">
+			<img src="images/To Do List.png" alt="capture d'écran D'une liste de taches en html/css/js" class="projet-img">
+			<div class="projet-details">
+				<h3>To Do List</h3>
+				<p>Un petit texte décrivant le projet A.</p>
+				<p class="languages">HTML, CSS, JavaScript</p>
+			</div>
+		</div>
+
+		<div class="projet-box">
+			<img src="images/register.png" alt="capture d'écran page de connexion html/css/js" class="projet-img">
+			<div class="projet-details">
+				<h3>Page de Connexion</h3>
+				<p>Un petit texte décrivant le projet B.</p>
+				<p class="languages">HTML, CSS , JS</p>
+			</div>
+		</div>
+
+		<div id="myModal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
+		</div>
+	</div>
+</section>
+
+	<section id="skill" class="fade-in">
+		<h1>Mes Compétences</h1>
+		<div class="skill-content" class="fade-in">
+			<div class="skill-box" class="fade-in">
+				<img src="/images/html.png" alt="Skill 1">
+				<p>HTML</p>
+			</div>
+			<div class="skill-box" class="fade-in" >
+				<img src="images/css.png" alt="Skill 2">
+				<p>CSS</p>
+			</div>
+			<div class="skill-box" class="fade-in">
+				<img src="images/js.png" alt="Skill 3">
+				<p>JavaScript</p>
+			</div>
+			<div class="skill-box" class="fade-in">
+				<img src="images/php.png" alt="Skill 4">
+				<p>php</p>
+			</div>
+			<div class="skill-box" class="fade-in">
+				<img src="images/java.png" alt="Skill 4">
+				<p>Java</p>
+			</div>
+		</div>
+	</section>
+	
+	<section id="certification" class="fade-in" >
+		<h2>Certifications</h2>
+		<p>Voici quelques-unes de mes certifications :</p>
+		<ul>
+			<li>Certification A</li>
+			<li>Certification B</li>
+		</ul>
+	</section>
+
+<section id="contact" class="fade-in">
+	<div class="contact-container">
+		<div class="contact-details">
+			<h2>Contact</h2>
+			<p>Vous pouvez me contacter à l'adresse suivante : <a
+					href="mailto:lechasles.antoine@gmail.com">lechasles.antoine@gmail.com</a></p>
+			<form id="contact-form">
+				<label for="name">Nom:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+				<button type="submit">Envoyer</button>
+			</form>
+		</div>
+		<div class="social-links">
+			<a href="https://www.linkedin.com/in/mr-toitoine-a708b830a/" target="_blank">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn"
+					class="social-icon">
+			</a>
+			<a href="https://github.com/AlphaSaiiko" target="_blank">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"
+					class="social-icon">
+			</a>
+			<a href="https://www.instagram.com/antoine_lchs/" target="_blank">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+					class="social-icon">
+			</a>
+		</div>
+	</div>
+</section>
+
+
+		<button id="scrollButton">Défiler</button>
+	<script src="/script.js"></script>
+</body>
+
+</html>

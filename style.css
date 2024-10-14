@@ -1,0 +1,516 @@
+body{
+	background-color:#2C3E50;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	margin: 0px;
+	padding:0px;
+}
+
+nav {
+	background-color: #20B2AA;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+nav h1 {
+	margin: 0;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+#home{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-family:sans-serif;
+	padding: 20px;
+	height: 100vh;
+}
+
+#home h2 {
+	font-size: 2em;
+	margin-bottom: 10px;
+	height: 20px;
+}
+
+#home p {
+	font-size: 1.2em;
+}
+
+.home-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#home img {
+	width: 300px;
+	/* Ajustez la taille de l'image selon vos besoins */
+	height: 300px;
+	/* Assurez-vous que la hauteur est la même que la largeur */
+	border-radius: 50%;
+	/* Pour rendre l'image circulaire */
+	object-fit: cover;
+	/* Pour s'assurer que l'image reste proportionnelle */
+	margin-left: 20px;
+	/* Espace entre le titre et l'image */
+}
+
+#about-me{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-me-content {
+background-color: rgba(64, 119, 151, 0.788);
+/* Couleur de fond semi-transparente */
+padding: 20px;
+border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+/* Bordure semi-transparente */
+margin-left: 25%;
+margin-right: 25%;
+}
+
+
+#about-me h2 {
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#about-me p {
+	color: #f4f4f9;
+	font-family: 'Open Sans',Arial,sans-serif;
+	font-size: medium;
+	line-height: 1.6;
+	/* Améliore l'espacement entre les lignes */
+	padding: 20px;
+}
+
+#skill {
+	display:flex;
+	height: 100vh;
+	width:auto;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+#skill h1 {
+	font-weight: bold;
+	font-size: xx-large	;
+}
+
+.skill-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.skill-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px;
+}
+
+.skill-box {
+	background-color: rgba(64, 119, 151, 0.788);
+	/* Couleur de fond semi-transparente */
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	/* Bordure semi-transparente */
+	text-align: center;
+	width: 300px;
+	/* Largeur fixe pour les boîtes */
+	height: 300px;
+	/* Hauteur fixe pour les boîtes */
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.skill-box img {
+width: 200px;
+/* Ajustez la taille de l'image selon vos besoins */
+height: 200px;
+/* Assurez-vous que la hauteur est la même que la largeur */
+object-fit: cover;
+/* Pour s'assurer que l'image reste proportionnelle */
+padding-top: 40px;
+background-color: transparent;
+/* Fond transparent pour les images */
+transition: background-color 0.3s ease;
+}
+
+.skill-box p {
+	font-weight: bold;
+	/* Mettre le texte en gras */
+	opacity: 0;
+}
+
+
+.skill-box:hover img {
+	opacity: 0;
+	/* Faire disparaître l'image au survol */
+}
+
+
+.skill-box:hover p {
+	opacity: 1;
+	font-weight: bold;
+	/* Mettre le texte en gras au survol */
+	color: white;
+	/* Changer la couleur du texte au survol */
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	transition:cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in {
+	opacity: 0;
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+#scrollButton {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 15px 30px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollButton:hover {
+	background-color: #2980b9;
+	transform: translateX(-50%) translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour les boîtes de projet */
+#projet {
+	display: flex;
+	height: 100vh;
+	text-align: center;
+	justify-content: flex-start;
+	/* Aligner en haut */
+	align-items: center;
+	padding-top: 20px;
+	/* Ajouter un peu de padding en haut */
+	flex-direction: column;
+}
+
+.projet-content {
+	display: flex;
+	flex-wrap: wrap;
+	/* Permet de passer à la ligne suivante */
+	justify-content: center;
+	/* Centrer les éléments horizontalement */
+	width: 100%;
+}
+
+#projet h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+	margin-bottom: 20px;
+	/* Ajouter un espace sous le titre */
+}
+
+.titre {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* Styles pour les boîtes de projet */
+.projet-box {
+	display: flex;
+	align-items: center;
+	background-color: rgba(64, 119, 151, 0.788);
+	/* Couleur de fond semi-transparente */
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	/* Bordure semi-transparente */
+	margin: 10px;
+	/* Ajouter un espace entre les boîtes */
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	cursor: pointer;
+	width: calc(50% - 20px);
+	/* Deux éléments par ligne avec un espace de 20px */
+	box-sizing: border-box;
+	/* Inclure le padding et la bordure dans la largeur */
+	width: 25%;
+}
+
+.projet-box img {
+	width: 150px;
+	/* Largeur de l'image */
+	height: auto;
+	/* Hauteur automatique pour maintenir le ratio */
+	border-radius: 10px;
+	margin-right: 20px;
+}
+
+.projet-details {
+	display: flex;
+	flex-direction: column;
+}
+
+.projet-details h3 {
+	margin: 0;
+	font-size: 1.5em;
+	color: white;
+}
+
+.projet-details p {
+	margin: 5px 0;
+	color: white;
+}
+
+.projet-details .languages {
+	margin-top: auto;
+	/* Pousse les langages vers le bas */
+	font-style: italic;
+	color: #ddd;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.projet-details .languages span {
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 2px 8px;
+	font-size: 0.9em;
+	color: white;
+}
+
+.projet-box:hover {
+	background-color: blue;
+	/* Couleur de fond bleu au survol */
+	transform: translateY(-5px);
+}
+
+/* Styles pour la modal */
+.modal {
+	display: none;
+	/* Masqué par défaut */
+	position: fixed;
+	/* Reste en place */
+	z-index: 1;
+	/* Au-dessus de tout */
+	padding-top: 100px;
+	/* Emplacement de la boîte */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Largeur complète */
+	height: 100%;
+	/* Hauteur complète */
+	overflow: auto;
+	/* Activer le défilement si nécessaire */
+	background-color: rgb(0, 0, 0);
+	/* Couleur de fond */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* Couleur de fond avec opacité */
+}
+
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+.modal-content,
+#caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#certification {
+
+}
+
+/* Styles pour la carte et les détails de contact */
+#contact {
+	display:flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+.contact-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	flex-direction: column;
+}
+
+.contact-details {
+	width: 50%;
+}
+
+#contact-form {
+	display: flex;
+	flex-direction: column;
+}
+
+#contact-form label {
+	margin-top: 10px;
+	color: white;
+}
+
+#contact-form input,
+#contact-form textarea {
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#contact-form button {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+	background-color: #2980b9;
+}
+
+/* Styles pour les liens sociaux */
+footer {
+	background-color: #333;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.social-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+	transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+	color: #3498db;
+}
+
+.social-icon {
+	padding: 30px;
+	height: 30px;
+}
