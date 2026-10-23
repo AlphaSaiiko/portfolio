@@ -1,0 +1,40 @@
+/* ==========================================================
+   Design tokens : couleurs, typographie, rayons.
+   Pour changer l'identité visuelle, modifier ce fichier.
+   ========================================================== */
+
+:root {
+  --bg: #0c1a21;
+  --surface: #122830;
+  --surface-2: #173340;
+  --line: #26434f;
+  --fg: #e9f0f2;
+  --muted: #9bb2ba;
+  --accent: #e0b25a;
+  --on-accent: #1a1305;
+  --ok: #5fd0a0;
+
+  --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+
+  --radius: 14px;
+  --maxw: 1152px;
+
+  color-scheme: dark;
+}
+
+/* Thème clair automatique (préférence système), sauf si l'utilisateur a forcé le sombre */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f1f5f6; --surface: #ffffff; --surface-2: #e6eef0; --line: #cfdce0;
+    --fg: #0e2128; --muted: #50697e; --accent: #8c5d0b; --on-accent: #ffffff; --ok: #14804f;
+    color-scheme: light;
+  }
+}
+
+/* Thème clair forcé via le bouton */
+:root[data-theme="light"] {
+  --bg: #f1f5f6; --surface: #ffffff; --surface-2: #e6eef0; --line: #cfdce0;
+  --fg: #0e2128; --muted: #50697e; --accent: #8c5d0b; --on-accent: #ffffff; --ok: #14804f;
+  color-scheme: light;
+}

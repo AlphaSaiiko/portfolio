@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Parcours (expérience / formation) et compétences
+   ========================================================================== */
+
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 64px); }
+@media (max-width: 799px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+
+.col-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.entry { padding-block: 22px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.entry h3 { font-weight: 650; font-size: 1.2rem; letter-spacing: -0.01em; }
+.when { color: var(--muted); font-size: .92rem; font-variant-numeric: tabular-nums; }
+.org { color: var(--accent); font-weight: 600; font-size: .98rem; }
+.entry .points { color: var(--muted); }
+
+/* Compétences */
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(28px, 5vw, 64px); }
+@media (max-width: 799px) { .skills { grid-template-columns: minmax(0, 1fr); } }
+
+.skill {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 16px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.skill dt { font-family: var(--font-display); font-weight: 600; }
+.skill dd { margin: 0; color: var(--muted); }
+@media (max-width: 479px) { .skill { grid-template-columns: minmax(0, 1fr); gap: 4px; } }

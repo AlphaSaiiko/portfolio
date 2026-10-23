@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Projets : filtres, grille, cartes, maquettes
+   ========================================================================== */
+
+/* Filtres */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.chip {
+  font: 500 .95rem var(--font-body);
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.chip:hover { color: var(--fg); background: var(--surface); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+
+/* Grille */
+.grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; grid-auto-flow: dense; }
+@media (min-width: 680px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid .card--feat { grid-column: span 2; }
+}
+@media (min-width: 1020px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.grid.filtered .card--feat { grid-column: auto; }
+.grid.filtered .card--feat .feat-split { display: block; }
+.grid.filtered .card--feat .mock { display: none; }
+
+/* Cartes */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  transition: border-color .2s, transform .2s;
+}
+.card:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+.kind { color: var(--muted); font-size: .88rem; font-weight: 500; }
+.card h3 { font-weight: 650; font-size: 1.3rem; letter-spacing: -0.015em; line-height: 1.15; }
+.desc { color: var(--muted); font-size: 1rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
+.tags li {
+  font-size: .82rem;
+  font-weight: 500;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 3px 9px;
+}
+.links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Grandes cartes avec maquette */
+.card--feat { padding: clamp(22px, 3vw, 32px); background: var(--surface-2); }
+.card--feat h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.feat-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: clamp(20px, 3vw, 36px);
+  align-items: center;
+}
+.feat-text { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+@media (max-width: 1019px) {
+  .feat-split { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Maquettes décoratives */
+.mock { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; min-width: 0; }
+.mock-bar { display: flex; gap: 6px; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.mock-bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.mock-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.ln { height: 9px; border-radius: 5px; background: var(--line); position: relative; }
+.w90 { width: 90%; } .w80 { width: 80%; } .w70 { width: 70%; }
+.w60 { width: 60%; } .w50 { width: 50%; } .w40 { width: 40%; }
+
+.caret { position: absolute; right: -2px; top: -4px; width: 2px; height: 17px; background: var(--accent); }
+.caret b {
+  position: absolute;
+  top: -17px;
+  left: -2px;
+  font: 700 .65rem var(--font-body);
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 1px 5px;
+  border-radius: 3px 3px 3px 0;
+}
+.caret.c2 { background: var(--ok); }
+.caret.c2 b { background: var(--ok); color: #06241a; }
+
+.chat { display: flex; flex-direction: column; gap: 6px; padding: 0 16px 16px; align-items: flex-start; }
+.chat span {
+  font-size: .78rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px 10px 10px 2px;
+  padding: 5px 10px;
+  color: var(--muted);
+}
+.chat span.me {
+  align-self: flex-end;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
+  border-radius: 10px 10px 2px 10px;
+}
+
+.pdf-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.pdf-head .ln { height: 12px; background: var(--muted); opacity: .6; }
+.pdf-badge { font: 700 .65rem var(--font-body); border: 1px solid var(--accent); color: var(--accent); padding: 2px 7px; border-radius: 4px; }
+.pdf-row { display: grid; grid-template-columns: 28% minmax(0, 1fr); gap: 12px; align-items: center; }
+.pdf-row .ln:first-child { background: var(--muted); opacity: .45; }
+.pdf-sign { margin-top: 6px; height: 42px; border: 1px dashed var(--line); border-radius: 8px; }
+
+.more { margin-top: 28px; }

@@ -1,165 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Antoine Lechasles</title>
+  <meta name="description" content="Antoine Lechasles, étudiant en BUT3 Informatique, développeur full-stack. Recherche un stage de fin d'études du 15 février au 4 juin 2027.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/projects.css">
+  <link rel="stylesheet" href="assets/css/career-skills.css">
+  <link rel="stylesheet" href="assets/css/contact-footer.css">
+  <link rel="stylesheet" href="assets/css/accessibility.css">
+
+  <!-- Thème appliqué avant l'affichage (évite le flash blanc) -->
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
 </head>
-
 <body>
-	<header>
-		<nav>
-			<h1>Antoine Lechales</h1>
-			<ul>
-				<li><a href="#home">Accueil</a></li>
-				<li><a href="#about-me">Présentation</a></li>
-				<li><a href="#projet">Projet</a></li>
-				<li><a href="#skill">Compétences</a></li>
-				<li><a href="#certification">Certification</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 
-	<section id="home" class="fade-in" >
-		<div class="home-content">
-			<h2>Bonjours, Je suis Antoine Lechasles</h2>
-			<p>Front End Develloper | Eleve de L'IUT du Havre</p>
-		</div>
-		<img src="/images/Capture d'écran 2024-09-23 230555.png" alt="Photo de profil">
-	</section>
+  <header class="top" id="top">
+    <div class="wrap">
+      <a class="brand" href="#top" data-text="site.name"></a>
+      <nav class="nav" id="nav" data-aria-label="site.mainNavLabel">
+        <!-- liens générés depuis content.js -->
+        <button class="icon-btn" id="theme" type="button" data-aria-label="site.themeButtonLabel">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-	<section id="about-me" class="fade-in">
-		<div class="about-me-content">
-			<h2>A propos de moi</h2>
-			<p>Je m'appelle Antoine Lechasles, j'ai 19 ans et je suis actuellement en deuxième année de BUT Informatique à l'IUT du
-			Havre. Passionné par le développement web, mon objectif professionnel est de devenir développeur front-end. Ce domaine
-			me fascine par son mélange subtil entre créativité et technique, permettant de transformer des concepts abstraits en
-			interfaces interactives.</p>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="status"><span class="dot" aria-hidden="true"></span><span data-text="hero.status"></span></p>
+          <h1 id="hero-name"></h1>
+          <p class="role" data-text="hero.role"></p>
+          <p class="lede" data-text="hero.lede"></p>
+          <div class="actions" id="hero-actions"></div>
 
-			<p>Ce qui me distingue, c'est mon esprit compétitif et ma détermination à toujours repousser mes limites. J'aime relever de
-			nouveaux défis et constamment de nouvelles compétences. Je suis animé par la volonté d'apprendre et de m'améliorer en
-			permanence, ce qui me pousse à rechercher des solutions innovantes aux problèmes complexes. Je crois fermement que le
-			développement web est un domaine en perpétuelle évolution, et il est essentiel de rester à jour avec les nouvelles.</p>
+          <div class="stage" data-aria-label="internship.ariaLabel">
+            <div class="stage-head">
+              <strong data-text="internship.title"></strong>
+              <span id="countdown"></span>
+            </div>
+            <div class="weeks" id="weeks" role="img"></div>
+            <div class="stage-dates">
+              <span data-text="internship.start.label"></span>
+              <span data-text="internship.end.label"></span>
+            </div>
+            <p class="stage-note" data-text="internship.note"></p>
+          </div>
+        </div>
+        <div class="crystal" id="crystal"></div>
+      </div>
+    </section>
 
-			<p>En plus de mes compétences techniques, je valorise l'esprit d'équipe et la collaboration. J'ai acquis une bonne capacité
-			d'adaptation à divers environnements de travail grâce à mes expériences de projets collaboratifs et à mon implication
-			dans des événements en ligne, tels que l'organisation de serveurs Minecraft. Ces expériences m'ont permis de développer
-			des compétences en gestion de projet et en communication.</p>
+    <section class="block" id="projets">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 data-text="projects.title"></h2>
+          <p data-text="projects.intro"></p>
+        </div>
+        <div class="filters" id="filters" role="group" data-aria-label="projects.filtersLabel"></div>
+        <div class="grid" id="grid"></div>
+        <div class="more" id="github-more"></div>
+      </div>
+    </section>
 
-			<p>Je suis également curieux d'en apprendre davantage sur le monde de l'entreprise et de découvrir comment mes compétences
-			peuvent contribuer à la réussite d'une équipe. Mon parcours académique, combiné à mes projets personnels, m'a permis de
-			développer un sens aigu de l'organisation.</p>
-		</div>
-	</section>
+    <section class="block" id="parcours">
+      <div class="wrap">
+        <div class="sec-head"><h2 data-text="career.title"></h2></div>
+        <div class="cols">
+          <div id="experience"></div>
+          <div id="education"></div>
+        </div>
+      </div>
+    </section>
 
-<section id="projet" class="fade-in">
-	<div class="titre">
-		<h2>Projet</h2>
-		<p>Voici quelques-uns de mes projets :</p>
-	</div>
-	<div class="projet-content">
-		<div class="projet-box">
-			<img src="images/To Do List.png" alt="capture d'écran D'une liste de taches en html/css/js" class="projet-img">
-			<div class="projet-details">
-				<h3>To Do List</h3>
-				<p>Un petit texte décrivant le projet A.</p>
-				<p class="languages">HTML, CSS, JavaScript</p>
-			</div>
-		</div>
+    <section class="block" id="competences">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 data-text="skills.title"></h2>
+          <p data-text="skills.intro"></p>
+        </div>
+        <dl class="skills" id="skills"></dl>
+      </div>
+    </section>
 
-		<div class="projet-box">
-			<img src="images/register.png" alt="capture d'écran page de connexion html/css/js" class="projet-img">
-			<div class="projet-details">
-				<h3>Page de Connexion</h3>
-				<p>Un petit texte décrivant le projet B.</p>
-				<p class="languages">HTML, CSS , JS</p>
-			</div>
-		</div>
+    <section class="block" id="contact">
+      <div class="wrap contact">
+        <div class="contact-copy">
+          <h2 data-text="contact.title"></h2>
+          <div id="contact-paragraphs" class="contact-paragraphs"></div>
+        </div>
+        <div class="contact-card">
+          <div class="field">
+            <small data-text="contact.emailLabel"></small>
+            <div class="field-row">
+              <span class="email" id="email" data-text="contact.email"></span>
+              <button class="copy" id="copy" type="button" data-text="contact.copyLabel"></button>
+            </div>
+          </div>
+          <div class="field">
+            <small data-text="contact.githubLabel"></small>
+            <a class="link" data-text="contact.githubText" data-href="contact.githubUrl" target="_blank" rel="noopener noreferrer"></a>
+          </div>
+          <div class="field">
+            <small data-text="contact.locationLabel"></small>
+            <span data-text="contact.location"></span>
+          </div>
+          <a class="btn btn-primary btn-mail" id="mail-btn" data-text="contact.mailButton"></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-		<div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<img class="modal-content" id="img01">
-			<div id="caption"></div>
-		</div>
-	</div>
-</section>
+  <footer>
+    <div class="wrap">
+      <span data-text="footer.left"></span>
+      <span data-text="footer.right"></span>
+    </div>
+  </footer>
 
-	<section id="skill" class="fade-in">
-		<h1>Mes Compétences</h1>
-		<div class="skill-content" class="fade-in">
-			<div class="skill-box" class="fade-in">
-				<img src="/images/html.png" alt="Skill 1">
-				<p>HTML</p>
-			</div>
-			<div class="skill-box" class="fade-in" >
-				<img src="images/css.png" alt="Skill 2">
-				<p>CSS</p>
-			</div>
-			<div class="skill-box" class="fade-in">
-				<img src="images/js.png" alt="Skill 3">
-				<p>JavaScript</p>
-			</div>
-			<div class="skill-box" class="fade-in">
-				<img src="images/php.png" alt="Skill 4">
-				<p>php</p>
-			</div>
-			<div class="skill-box" class="fade-in">
-				<img src="images/java.png" alt="Skill 4">
-				<p>Java</p>
-			</div>
-		</div>
-	</section>
-	
-	<section id="certification" class="fade-in" >
-		<h2>Certifications</h2>
-		<p>Voici quelques-unes de mes certifications :</p>
-		<ul>
-			<li>Certification A</li>
-			<li>Certification B</li>
-		</ul>
-	</section>
+  <!-- Bibliothèque 3D -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
-<section id="contact" class="fade-in">
-	<div class="contact-container">
-		<div class="contact-details">
-			<h2>Contact</h2>
-			<p>Vous pouvez me contacter à l'adresse suivante : <a
-					href="mailto:lechasles.antoine@gmail.com">lechasles.antoine@gmail.com</a></p>
-			<form id="contact-form">
-				<label for="name">Nom:</label>
-				<input type="text" id="name" name="name" required>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
-				<label for="message">Message:</label>
-				<textarea id="message" name="message" rows="4" required></textarea>
-				<button type="submit">Envoyer</button>
-			</form>
-		</div>
-		<div class="social-links">
-			<a href="https://www.linkedin.com/in/mr-toitoine-a708b830a/" target="_blank">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn"
-					class="social-icon">
-			</a>
-			<a href="https://github.com/AlphaSaiiko" target="_blank">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"
-					class="social-icon">
-			</a>
-			<a href="https://www.instagram.com/antoine_lchs/" target="_blank">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
-					class="social-icon">
-			</a>
-		</div>
-	</div>
-</section>
+  <!-- Contenu (tout le texte du site) -->
+  <script src="content/content.js" defer></script>
 
-
-		<button id="scrollButton">Défiler</button>
-	<script src="/script.js"></script>
+  <!-- Code du site (l'ordre compte) -->
+  <script src="assets/js/utils.js" defer></script>
+  <script src="assets/js/icons.js" defer></script>
+  <script src="assets/js/mockups.js" defer></script>
+  <script src="assets/js/render-static.js" defer></script>
+  <script src="assets/js/projects.js" defer></script>
+  <script src="assets/js/career-skills.js" defer></script>
+  <script src="assets/js/internship.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+  <script src="assets/js/crystal.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>
